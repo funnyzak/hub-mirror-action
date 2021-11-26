@@ -10,7 +10,7 @@ mkdir -p /root/.ssh
 echo "${INPUT_DST_KEY}" > /root/.ssh/id_rsa
 chmod 600 /root/.ssh/id_rsa
 
-pip3 install -r /hub-mirror/requirements.txt
+pip3 -H install -r /hub-mirror/requirements.txt
 
 python3 /hub-mirror/hubmirror.py --src "${INPUT_SRC}" --dst "${INPUT_DST}" \
 --dst-token "${INPUT_DST_TOKEN}" \
